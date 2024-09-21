@@ -1,0 +1,10 @@
+<h1>Mood Prediction</h1>
+<form method="POST">
+    {% csrf_token %}
+    <textarea name="user_text" rows="4" cols="50"></textarea><br><br>
+    <input type="submit" value="Predict Mood">
+</form>
+
+{% if mood %}
+    <h2>Your mood is: {{ mood }}</h2>
+{% endif %}

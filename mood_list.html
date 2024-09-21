@@ -1,0 +1,6 @@
+<h1>Select a Mood</h1>
+<ul>
+    {% for mood in moods %}
+        <li><a href="{% url 'mood_detail' mood.id %}">{{ mood.name }}</a></li>
+    {% endfor %}
+</ul>
